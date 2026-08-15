@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday AYUSHI 🎂</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    font-family:Arial,sans-serif;
+    color:white;
+
+    background:
+        radial-gradient(circle at 20% 20%,#ff8ec7,transparent 30%),
+        linear-gradient(135deg,#6a11cb,#2575fc);
+}
+
+/* ================= SCREEN ================= */
+
+.screen{
+    min-height:100vh;
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+}
+
+/* ================= CARD ================= */
+
+.card{
+    width:100%;
+    max-width:520px;
+
+    padding:35px 25px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.16);
+
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.3);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.3);
+
+    animation:appear 1s ease;
+}
+
+@keyframes appear{
+
+    from{
+        opacity:0;
+        transform:scale(.7);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+/* ================= CAKE EMOJI ================= */
+
+.cakeEmoji{
+    font-size:80px;
+
+    animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+}
+
+/* ================= TEXT ================= */
+
+h1{
+
+    font-size:
+        clamp(2.4rem,10vw,4rem);
+
+    margin:10px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #ffe66d,
+            #fff
+        );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+h2{
+
+    font-size:
+        clamp(1.3rem,6vw,2rem);
+
+    margin-bottom:20px;
+}
+
+#typing{
+
+    min-height:100px;
+
+    line-height:1.7;
+
+    font-size:1.05rem;
+
+    margin-bottom:20px;
+}
+
+/* ================= BUTTON ================= */
+
+button{
+
+    border:none;
+
+    padding:15px 28px;
+
+    border-radius:50px;
+
+    background:white;
+
+    color:#6a11cb;
+
+    font-size:1rem;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.2);
+}
+
+button:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+        0 0 30px white;
+}
+
+button:active{
+
+    transform:scale(.94);
+}
+
+/* ================= CAKE SCREEN ================= */
+
+#cakeScreen{
+
+    display:none;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+    padding-top:50px;
+
+}
+
+.cakeTitle{
+
+    font-size:
+        clamp(1.8rem,8vw,3rem);
+
+    margin-bottom:10px;
+}
+
+.instruction{
+
+    margin-bottom:15px;
+
+    font-size:1rem;
+}
+
+/* ================= CAKE AREA ================= */
+
+.cakeArea{
+
+    position:relative;
+
+    width:320px;
+    height:260px;
+
+    touch-action:none;
+
+    user-select:none;
+
+}
+
+/* ================= CAKE HALVES ================= */
+
+.cakeHalf{
+
+    position:absolute;
+
+    width:150px;
+    height:170px;
+
+    top:65px;
+
+    transition:
+        transform 1s ease;
+}
+
+.leftCake{
+
+    left:10px;
+}
+
+.rightCake{
+
+    right:10px;
+}
+
+/* ================= CAKE ================= */
+
+.cakeBase{
+
+    position:absolute;
+
+    width:150px;
+    height:65px;
+
+    bottom:0;
+    left:0;
+
+    background:#ff5fa2;
+
+    border-radius:
+        0 0 22px 22px;
+}
+
+.cakeMiddle{
+
+    position:absolute;
+
+    width:140px;
+    height:65px;
+
+    top:55px;
+    left:5px;
+
+    background:#ff83b9;
+
+    border-radius:
+        0 0 16px 16px;
+}
+
+.cakeTop{
+
+    position:absolute;
+
+    width:140px;
+    height:65px;
+
+    top:25px;
+    left:5px;
+
+    background:#ffacd2;
+
+    border-radius:50%;
+
+    box-shadow:
+        inset 0 -10px #ff72ae;
+}
+
+.cream{
+
+    position:absolute;
+
+    width:125px;
+    height:20px;
+
+    top:40px;
+    left:12px;
+
+    background:white;
+
+    border-radius:50%;
+}
+
+/* ================= CANDLES ================= */
+
+.candle{
+
+    position:absolute;
+
+    width:12px;
+    height:38px;
+
+    top:0;
+
+    background:white;
+
+    border-radius:4px;
+
+    z-index:5;
+}
+
+.candle1{
+    left:40px;
+}
+
+.candle2{
+    left:68px;
+}
+
+.candle3{
+    left:96px;
+}
+
+/* ================= FLAME ================= */
+
+.flame{
+
+    position:absolute;
+
+    width:14px;
+    height:19px;
+
+    top:-17px;
+    left:-1px;
+
+    background:#ffd32a;
+
+    border-radius:
+        50% 50% 50% 0;
+
+    transform:rotate(-45deg);
+
+    animation:
+        flicker .4s infinite alternate;
+}
+
+@keyframes flicker{
+
+    from{
+        transform:
+            rotate(-45deg)
+            scale(1);
+    }
+
+    to{
+        transform:
+            rotate(-45deg)
+            scale(1.2);
+    }
+
+}
+
+/* ================= KNIFE ================= */
+
+.knife{
+
+    position:absolute;
+
+    width:150px;
+    height:10px;
+
+    background:#eee;
+
+    border-radius:10px;
+
+    top:45px;
+    left:150px;
+
+    transform:
+        rotate(-55deg);
+
+    transform-origin:
+        left center;
+
+    pointer-events:none;
+
+    z-index:30;
+
+    box-shadow:
+        0 2px 5px rgba(0,0,0,.3);
+}
+
+.handle{
+
+    position:absolute;
+
+    width:55px;
+    height:16px;
+
+    right:-48px;
+    top:-3px;
+
+    background:#222;
+
+    border-radius:5px;
+}
+
+/* ================= CUT ================= */
+
+.cutLine{
+
+    position:absolute;
+
+    left:157px;
+    top:65px;
+
+    width:5px;
+    height:170px;
+
+    background:white;
+
+    opacity:0;
+
+    z-index:25;
+
+    box-shadow:
+        0 0 15px white;
+
+    transition:.4s;
+}
+
+.cutLine.cut{
+
+    opacity:1;
+}
+
+.cakeArea.cut .leftCake{
+
+    transform:
+        translateX(-45px)
+        rotate(-8deg);
+}
+
+.cakeArea.cut .rightCake{
+
+    transform:
+        translateX(45px)
+        rotate(8deg);
+}
+
+/* ================= FRIEND MESSAGE ================= */
+
+#message{
+
+    display:none;
+
+    width:100%;
+    max-width:520px;
+
+    margin-top:15px;
+
+    padding-bottom:40px;
+}
+
+#message.show{
+
+    display:block;
+
+    animation:
+        messageIn 1s ease;
+}
+
+.friendMessage{
+
+    padding:22px;
+
+    border-radius:25px;
+
+    background:
+        rgba(255,255,255,.16);
+
+    backdrop-filter:blur(12px);
+
+    border:
+        1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,.25);
+
+    font-size:1.05rem;
+
+    line-height:1.7;
+}
+
+.friendMessage .big{
+
+    font-size:1.7rem;
+
+    font-weight:bold;
+}
+
+.friendMessage p{
+
+    margin-top:12px;
+}
+
+@keyframes messageIn{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(30px)
+            scale(.9);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+/* ================= CONFETTI BUTTON ================= */
+
+.confettiButton{
+
+    margin-top:25px;
+
+    background:
+        linear-gradient(
+            45deg,
+            #ff6b81,
+            #ffa502,
+            #e84393
+        );
+
+    color:white;
+
+    padding:
+        17px 30px;
+
+    font-size:1.05rem;
+
+    box-shadow:
+        0 0 25px rgba(255,255,255,.25);
+}
+
+.confettiButton:hover{
+
+    box-shadow:
+        0 0 35px rgba(255,255,255,.7);
+}
+
+#tapCount{
+
+    margin-top:12px;
+
+    font-size:.95rem;
+
+    opacity:.9;
+}
+
+/* ================= CONFETTI ================= */
+
+.confetti{
+
+    position:fixed;
+
+    top:-20px;
+
+    width:10px;
+    height:18px;
+
+    z-index:100;
+
+    pointer-events:none;
+
+    animation:
+        fall linear forwards;
+}
+
+@keyframes fall{
+
+    to{
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:480px){
+
+    .screen{
+
+        padding:12px;
+    }
+
+    .card{
+
+        padding:30px 18px;
+    }
+
+    .cakeEmoji{
+
+        font-size:65px;
+    }
+
+    #typing{
+
+        font-size:.95rem;
+    }
+
+    .cakeArea{
+
+        transform:scale(.82);
+
+        margin-top:-10px;
+
+        margin-bottom:-20px;
+    }
+
+    .instruction{
+
+        font-size:.9rem;
+    }
+
+    .friendMessage{
+
+        font-size:.95rem;
+
+        padding:18px;
+    }
+
+    .confettiButton{
+
+        width:90%;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =================================================
+     HOME SCREEN
+================================================= -->
+
+<section
+    class="screen"
+    id="homeScreen"
+>
+
+    <div class="card">
+
+        <div class="cakeEmoji">
+            🎂
+        </div>
+
+        <h1>
+            Happy Birthday!
+        </h1>
+
+        <h2>
+            🎉 AYUSHI 🎉
+        </h2>
+
+        <p id="typing"></p>
+
+        <button
+            onclick="startCelebration()"
+        >
+            🎊 Celebrate
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     CAKE SCREEN
+================================================= -->
+
+<section
+    class="screen"
+    id="cakeScreen"
+>
+
+    <h1 class="cakeTitle">
+        🎂 Time to Cut the Cake! 🎂
+    </h1>
+
+    <p class="instruction">
+        👆 Swipe across the cake to cut it!
+    </p>
+
+
+    <div
+        class="cakeArea"
+        id="cakeArea"
+    >
+
+
+        <!-- LEFT CAKE -->
+
+        <div
+            class="cakeHalf leftCake"
+        >
+
+            <div
+                class="candle candle1"
+            >
+                <div class="flame"></div>
+            </div>
+
+            <div
+                class="candle candle2"
+            >
+                <div class="flame"></div>
+            </div>
+
+            <div
+                class="candle candle3"
+            >
+                <div class="flame"></div>
+            </div>
+
+            <div class="cakeTop"></div>
+
+            <div class="cream"></div>
+
+            <div class="cakeMiddle"></div>
+
+            <div class="cakeBase"></div>
+
+        </div>
+
+
+        <!-- RIGHT CAKE -->
+
+        <div
+            class="cakeHalf rightCake"
+        >
+
+            <div class="cakeTop"></div>
+
+            <div class="cream"></div>
+
+            <div class="cakeMiddle"></div>
+
+            <div class="cakeBase"></div>
+
+        </div>
+
+
+        <!-- CUT LINE -->
+
+        <div
+            class="cutLine"
+            id="cutLine"
+        ></div>
+
+
+        <!-- KNIFE -->
+
+        <div
+            class="knife"
+            id="knife"
+        >
+
+            <div class="handle"></div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         FINAL MESSAGE
+    ================================================= -->
+
+    <div id="message">
+
+        <div class="friendMessage">
+
+            <div class="big">
+                🎉🎂 Cake Cut! 🎂🎉
+            </div>
+
+            <p>
+                💖 Happy Birthday, AYUSHI! 💖
+            </p>
+
+            <p>
+                I'm really lucky to have a friend
+                like you. Thank you for all the
+                laughs, fun moments, and beautiful
+                memories we've shared. 🥰
+            </p>
+
+            <p>
+                I hope this birthday brings you
+                lots of happiness, success and
+                amazing memories.
+            </p>
+
+            <p>
+                Keep smiling and always stay
+                awesome! ✨
+            </p>
+
+            <p>
+                No matter where life takes us,
+                I hope our friendship always
+                stays special. 💕
+            </p>
+
+            <p>
+                🎈 Once again, Happy Birthday,
+                my dear friend! 🎈
+            </p>
+
+
+            <!-- FINAL CONFETTI BUTTON -->
+
+            <button
+                class="confettiButton"
+                onclick="tapConfetti()"
+            >
+                🎉 TAP FOR MORE CONFETTI! 🎉
+            </button>
+
+            <div id="tapCount">
+                Confetti taps: 0
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+/* =================================================
+   TYPING ANIMATION
+================================================= */
+
+const birthdayText =
+"Wishing you a wonderful birthday filled with happiness, laughter, love and unforgettable memories! May all your dreams come true and may this year bring you countless beautiful moments. 💖✨";
+
+let typingIndex = 0;
+
+function typeMessage(){
+
+    if(
+        typingIndex <
+        birthdayText.length
+    ){
+
+        document
+            .getElementById("typing")
+            .textContent +=
+            birthdayText.charAt(
+                typingIndex
+            );
+
+        typingIndex++;
+
+        setTimeout(
+            typeMessage,
+            35
+        );
+    }
+}
+
+typeMessage();
+
+
+
+/* =================================================
+   CONFETTI
+================================================= */
+
+function createConfetti(){
+
+    const confetti =
+        document.createElement("div");
+
+    confetti.className =
+        "confetti";
+
+
+    const colors = [
+
+        "#ff4757",
+        "#ffa502",
+        "#2ed573",
+        "#1e90ff",
+        "#e84393",
+        "#ffd32a",
+        "#ffffff",
+        "#ff6b81"
+
+    ];
+
+
+    confetti.style.background =
+        colors[
+            Math.floor(
+                Math.random() *
+                colors.length
+            )
+        ];
+
+
+    confetti.style.left =
+        Math.random() *
+        100 +
+        "vw";
+
+
+    confetti.style.width =
+        Math.random()*8 +
+        6 +
+        "px";
+
+
+    confetti.style.height =
+        Math.random()*12 +
+        8 +
+        "px";
+
+
+    confetti.style.animationDuration =
+        Math.random()*3 +
+        2 +
+        "s";
+
+
+    document.body.appendChild(
+        confetti
+    );
+
+
+    setTimeout(
+        function(){
+
+            confetti.remove();
+
+        },
+        6000
+    );
+}
+
+
+
+function confettiBlast(
+    amount = 180
+){
+
+    for(
+        let i=0;
+        i<amount;
+        i++
+    ){
+
+        setTimeout(
+            createConfetti,
+            i*8
+        );
+
+    }
+
+}
+
+
+
+/* =================================================
+   START CELEBRATION
+================================================= */
+
+function startCelebration(){
+
+    document
+        .getElementById(
+            "homeScreen"
+        )
+        .style.display =
+        "none";
+
+
+    document
+        .getElementById(
+            "cakeScreen"
+        )
+        .style.display =
+        "flex";
+
+
+    /* Small celebration */
+
+    confettiBlast(100);
+
+}
+
+
+
+/* =================================================
+   CAKE CUTTING
+================================================= */
+
+const cakeArea =
+    document.getElementById(
+        "cakeArea"
+    );
+
+const knife =
+    document.getElementById(
+        "knife"
+    );
+
+
+let startX = 0;
+
+let cutting = false;
+
+let alreadyCut = false;
+
+
+
+/* ================= TOUCH START ================= */
+
+cakeArea.addEventListener(
+    "touchstart",
+    function(event){
+
+        if(alreadyCut)
+            return;
+
+        const touch =
+            event.touches[0];
+
+        startX =
+            touch.clientX;
+
+        cutting = true;
+
+    },
+    {passive:true}
+);
+
+
+
+/* ================= TOUCH MOVE ================= */
+
+cakeArea.addEventListener(
+    "touchmove",
+    function(event){
+
+        if(
+            !cutting ||
+            alreadyCut
+        )
+            return;
+
+
+        const touch =
+            event.touches[0];
+
+
+        const rect =
+            cakeArea.getBoundingClientRect();
+
+
+        knife.style.left =
+            (
+                touch.clientX -
+                rect.left
+            ) + "px";
+
+
+        knife.style.top =
+            (
+                touch.clientY -
+                rect.top
+            ) + "px";
+
+    },
+    {passive:true}
+);
+
+
+
+/* ================= TOUCH END ================= */
+
+cakeArea.addEventListener(
+    "touchend",
+    function(event){
+
+        if(
+            !cutting ||
+            alreadyCut
+        )
+            return;
+
+
+        cutting = false;
+
+
+        const touch =
+            event.changedTouches[0];
+
+
+        const distance =
+            Math.abs(
+                touch.clientX -
+                startX
+            );
+
+
+        if(distance > 70){
+
+            cutCake();
+
+        }
+
+    }
+);
+
+
+
+/* =================================================
+   MOUSE SUPPORT
+================================================= */
+
+cakeArea.addEventListener(
+    "mousedown",
+    function(event){
+
+        if(alreadyCut)
+            return;
+
+        startX =
+            event.clientX;
+
+        cutting = true;
+
+    }
+);
+
+
+document.addEventListener(
+    "mousemove",
+    function(event){
+
+        if(
+            !cutting ||
+            alreadyCut
+        )
+            return;
+
+
+        const rect =
+            cakeArea.getBoundingClientRect();
+
+
+        knife.style.left =
+            (
+                event.clientX -
+                rect.left
+            ) + "px";
+
+
+        knife.style.top =
+            (
+                event.clientY -
+                rect.top
+            ) + "px";
+
+    }
+);
+
+
+document.addEventListener(
+    "mouseup",
+    function(event){
+
+        if(
+            !cutting ||
+            alreadyCut
+        )
+            return;
+
+
+        cutting = false;
+
+
+        const distance =
+            Math.abs(
+                event.clientX -
+                startX
+            );
+
+
+        if(distance > 70){
+
+            cutCake();
+
+        }
+
+    }
+);
+
+
+
+/* =================================================
+   CAKE CUT
+================================================= */
+
+function cutCake(){
+
+    if(alreadyCut)
+        return;
+
+
+    alreadyCut = true;
+
+
+    /* Split cake */
+
+    cakeArea
+        .classList
+        .add("cut");
+
+
+    document
+        .getElementById(
+            "cutLine"
+        )
+        .classList
+        .add("cut");
+
+
+    /* BIG CONFETTI */
+
+    setTimeout(
+        function(){
+
+            confettiBlast(250);
+
+        },
+        400
+    );
+
+
+    /* SECOND CONFETTI */
+
+    setTimeout(
+        function(){
+
+            confettiBlast(200);
+
+        },
+        1100
+    );
+
+
+    /* SHOW MESSAGE */
+
+    setTimeout(
+        function(){
+
+            document
+                .getElementById(
+                    "message"
+                )
+                .classList
+                .add("show");
+
+        },
+        1000
+    );
+
+}
+
+
+
+/* =================================================
+   TAP FOR CONFETTI
+================================================= */
+
+let tapCount = 0;
+
+
+function tapConfetti(){
+
+    tapCount++;
+
+
+    /* Update counter */
+
+    document
+        .getElementById(
+            "tapCount"
+        )
+        .textContent =
+        "Confetti taps: " +
+        tapCount;
+
+
+    /*
+       More taps = more confetti
+    */
+
+    let amount =
+        80 + tapCount * 25;
+
+
+    /* Maximum per tap */
+
+    if(amount > 400){
+
+        amount = 400;
+
+    }
+
+
+    confettiBlast(amount);
+
+
+    /*
+       Extra celebration
+       every 5 taps
+    */
+
+    if(
+        tapCount % 5 === 0
+    ){
+
+        setTimeout(
+            function(){
+
+                confettiBlast(400);
+
+            },
+            300
+        );
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
